@@ -30,7 +30,6 @@
 
 
         -->
-    <!-- 123 -->
 
     <h1>list reversed="reversed" 倒叙</h1>
     <ol reversed="reversed">
@@ -112,17 +111,40 @@ img 里面
 
 <form action="/" method="GET">
     <p>
-        username <input type="text">
+        username <input type="text" name="username">
     </p>
     <p>
-        psw <input type="password">
+        psw <input name="password" type="password">
     </p>
-    <input> type="submit" value="login"
+
+    <input type="submit" value="login">
 </form>
 <!-- action 里面写地址
  method
  post 
  get
+ input 的 name 得和ee商量好
 -->
+
+<h1>你喜欢的品牌</h1>
+
+bmw<input type="radio" name="1" value="bmw"> mercedes-benz
+
+<input type="radio" name="1" value="mercedes-benz"> mercedes
+
+<input type="radio" name="1" value="mercedes">
+<!--
+     input里面 type=radio 就是选择题 
+     name 一致时候，才是单选
+     value 是传输的值
+     
+-->
+
+<h1>input checkbox</h1>
+
+rolex<input type="checkbox" name="watch"> tudor
+<input type="checkbox" name="watch"> ap
+<input type="checkbox" name="watch">
+
 
 </html>
