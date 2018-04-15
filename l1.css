@@ -1,5 +1,41 @@
+/* 
+selector
+
+tag selector 
+如：
+div {}
+
+class selector
+.classname{}
+
+id selector
+#idname{}
+
+*/
+
 .mao {
     position: fixed;
     right: 50px;
     top: 100px;
+}
+
+.demo {
+    width: 50px;
+    height: 200px;
+    background: orange;
+}
+
+.demo {
+    width: 500px;
+}
+
+
+/* 后面覆盖前面的 */
+
+.oSpan {
+    color: royalblue;
+}
+
+#oDivOne {
+    color: pink;
 }
