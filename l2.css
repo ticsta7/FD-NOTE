@@ -1,0 +1,33 @@
+div {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: lighter;
+}
+
+
+/*
+ 浏览器 文字默认大小 16px
+ 
+ font-size 是设置高度，宽度是自适应
+ 
+ font-family 字体 
+ 
+ font-weight 默认normal
+ 还可以 lighter  bold  bolder
+ 一般情况下 lighter 和bolder 都不用
+还可以 写数字 ，如100，200。 manx=900.
+bold 效果和 <strong>标签效果一样。
+
+ */
+
+div {
+    color: ;
+}
+
+
+/* 
+ 可以 #三原色的值 （rgb）
+ 例如 #ff0000 （red）
+ 
+
+ */
