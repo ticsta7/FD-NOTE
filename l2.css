@@ -21,13 +21,80 @@ bold 效果和 <strong>标签效果一样。
  */
 
 div {
-    color: ;
+    color: red;
 }
 
 
 /* 
  可以 #三原色的值 （rgb）
  例如 #ff0000 （red）
- 
+ 00 min  00 01 。。。09 -> 0a。。。。0f -> 10
+ ff max
+ 也可以 color:rgb(r,g,b);
+ r,g,b 是0-255的数字
+ */
 
+div {
+    border: 1px solid #f40;
+}
+
+
+/* 
+border:像素 风格 颜色；
+风格：solid 实线 最常用的
+#ff4400= #f40
+ */
+
+div {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    text-indent: 10em;
+}
+
+
+/*
+ 居中水平 
+ 当行高（line height）= height 文本就垂直居中了
+text indent 首行缩进，可以写PX，也可以em ，一个相对单位。
+1 em= 1fontsize 的值
+例如 font size：10px；
+则此时 1em= 10px
+
+ */
+
+div {
+    text-decoration: underline;
+}
+
+
+/* 
+  text-decoration ,
+  underline ，
+  line-through 删除线
+  overline  上划线 （一般不用）
+  
+ */
+
+div {
+    cursor: pointer;
+}
+
+
+/* cursor
+ 是 鼠标碰到他时候， 指针样式 */
+
+
+/* 
+块标签 div p  address ul li ol form h1-h6
+独占一行
+可以通过CSS设置 宽高
+
+行标签 span  a em strong del
+根据自身大小决定占的空间
+不可以通过。。。如上
+
+行级块标签  img inputß
+根据自身大小决定占的空间
+可以通过，，，，
  */
