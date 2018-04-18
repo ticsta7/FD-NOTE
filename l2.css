@@ -97,4 +97,19 @@ div {
 行级块标签  img inputß
 根据自身大小决定占的空间
 可以通过，，，，
+
+display：block inline inline-block；
  */
+
+
+/* 给img设置宽高时候，最好只设置1个值
+ 另一个就自适应了。 */
+
+
+/* 
+ div{
+     vertical-align: middle;
+ } 
+ 控制右边 {行级（块）标签/文本}  的对齐方式
+ 
+ 也可以写像素*/
