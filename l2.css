@@ -113,3 +113,80 @@ display：block inline inline-block；
  控制右边 {行级（块）标签/文本}  的对齐方式
  
  也可以写像素*/
+
+
+/* 
+div {
+    width: 100px;
+    height: 100px;
+   
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+   
+    background-color: orange;
+   
+    border-left: 5px red solid;
+    border-right: 5px red solid;
+    border: 1px 2px 3px 4px;
+    
+    padding: 10px； 一圈10px
+    padding：10px 20px； 上下 左右
+    padding：10px 20px 30px 40px； 
+    上右下左 12点顺时针
+
+    margin 左右会叠加，上下不会，会取最大值
+    
+    
+} 
+
+*/
+
+
+/*
+ margin 塌陷
+ <div class="wai">
+ 
+ <div class="nei"> 
+ 
+ </div>
+ </div>
+
+ .wai{
+     margin-top;100
+     margin-left 100
+ }
+
+ .nei{
+     margin-top > wai 的margin top
+     就带着 wai 这个DIV 一起往下动
+ }
+
+ 解决方法：给.wai 加一个 border-top（但是加了东西了） 
+ 或者 wai 加上 overflow:hidden 溢出隐藏（也有副作用）
+ 
+ so。 触发bfc  块级格式化上下文 
+ 还可以 position:absolute； 
+ or   float：left；
+ or   display：inlin-block；
+
+ ------
+ 若想让 某个标签居中且有margin，
+ 且横向拉动浏览器，标签不消失
+
+ 可以 设定宽度 如 width 100
+ 然后 margin-left：auto
+           - right:auto
+*/
+
+
+/* 
+层模型  2d变3d
+
+position：absolute relative fixed  static；  
+          绝对      相对      固定   默认的（标准文档流定位）
+
+         absolute 向上提一个层，（出屏幕外朝向人） 
+          
+*/
