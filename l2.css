@@ -187,6 +187,16 @@ div {
 position：absolute relative fixed  static；  
           绝对      相对      固定   默认的（标准文档流定位）
 
-         absolute 向上提一个层，（出屏幕外朝向人） 
+         absolute 脱离原来位置向上提一个层，（出屏幕外朝向人）
+                  找离他最近的有定位的父级定位，如果没有
+                  参照浏览器边框进行定位         
+         
+                  若2个标签都 absolute了 后 absolute的标签 抽离的层面更高
+         控制Z轴坐标
+          z-index:1; (给一个大于零的值）
+        
+        relative:1 保留为止进行定位。
+                 2 参照原来位置进行定位
+         
           
 */
