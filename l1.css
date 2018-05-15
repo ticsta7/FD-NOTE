@@ -38,6 +38,11 @@ div{
     background: orange;
 }
 
+.benz {
+    width: 100px;
+    height: 100px;
+}
+
 .demo {
     width: 500px;
 }
