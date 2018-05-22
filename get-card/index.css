@@ -1,7 +1,22 @@
+body {
+    margin: 0px;
+}
+
 .header {
     height: 80px;
+    border-bottom: 1px solid blue;
+    position: fixed;
+    width: 100%;
+    background-color: white;
 }
 
 .container {
-    height: px;
+    max-width: 800px;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feed {
+    min-height: 1200px;
 }
