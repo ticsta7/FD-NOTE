@@ -1,5 +1,17 @@
 body {
     margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.clearfix {
+    clear: both;
+}
+
+.logo {
+    font-size: 35px;
+    color: #18bc9c;
+    margin-left: 78px;
+    margin-top: 20px;
 }
 
 .header {
@@ -7,7 +19,24 @@ body {
     border-bottom: 1px solid blue;
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 0px;
+}
+
+
+/* 鼠标碰到就不透明  */
+
+.header:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    margin-left: 5px;
 }
 
 .container {
@@ -15,8 +44,21 @@ body {
     border: 1px solid red;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 80px;
 }
 
 .feed {
     min-height: 1200px;
+}
+
+.footer {
+    margin-right: 20px;
+    right: 0px;
+    position: fixed;
+    bottom: 0px;
+    height: 40px;
+    width: 120px;
+    border: 1px solid gray;
+    padding: 5px;
+    background-color: white;
 }
