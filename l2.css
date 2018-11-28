@@ -86,7 +86,9 @@ div {
 
 
 /* 
-块标签 div p  address ul li ol form h1-h6
+块标签 div p  address 
+ul li ol
+ form h1-h6
 独占一行
 可以通过CSS设置 宽高
 
@@ -117,19 +119,6 @@ display：block inline inline-block；
 
 /* 
 div {
-    width: 100px;
-    height: 100px;
-   
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 50px;
-   
-    background-color: orange;
-   
-    border-left: 5px red solid;
-    border-right: 5px red solid;
-    border: 1px 2px 3px 4px;
     
     padding: 10px； 一圈10px
     padding：10px 20px； 上下 左右
@@ -137,8 +126,7 @@ div {
     上右下左 12点顺时针
 
     margin 左右会叠加，上下不会，会取最大值
-    
-    
+ 
 } 
 
 */
