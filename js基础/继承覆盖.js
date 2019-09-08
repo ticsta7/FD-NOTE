@@ -23,8 +23,8 @@ class salaryData
 }
 var test =[];
 
-test.push( new salaryData('bj','fe','20000','10000'));
-test.push( new salaryData('bj','gz','18000','8000'));
+test.push( new salaryData('bj','fe',20000,10000));
+test.push( new salaryData('bj','gz',18000,8000));
 
 for( i in test)
 {
