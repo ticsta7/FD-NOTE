@@ -23,7 +23,7 @@ class salaryData
   
 }
 
-var gz_fe = new salaryData( 'gz' , 'fe' , 7000 , 18000 );
+var gz_fe = new salaryData( 'gz' , 'fe' , 18000 , 8000 );
 
 //console.log( gz_fe.avg_salary() );
 
