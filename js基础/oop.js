@@ -18,14 +18,12 @@ class salaryData
   {
       console.log((this.salary_min + this.salary_max)/2);
       
-   // return (this.salary_min + this.salary_max)/2;
   }
   
 }
 
 var gz_fe = new salaryData( 'gz' , 'fe' , 18000 , 8000 );
 
-//console.log( gz_fe.avg_salary() );
 
 
 gz_fe.avg_salary();
