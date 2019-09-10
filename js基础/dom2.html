@@ -9,6 +9,7 @@
 <body>
 
     <a href="http://www.github.com/ticsta7"><img src="https://images.unsplash.com/photo-1479063589010-7697b04feb14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=1114&q=80" alt=""></a>
+    
     <script>
         //元信息
      console.log(document.doctype.name);
@@ -19,12 +20,25 @@
      //子元素
      console.log(document.head.innerHTML);
 
-     
+
      //资源
      for( i = 0 ; i<document.images.length;i++)
      {
         console.log(document.images[i].src);
-     }
+     }//批量抓图
+
+     for( i = 0 ; i<document.links.length;i++)
+     {
+        console.log(document.links[i].src);
+     }//批量抓链接
+
+     //创建元素
+     var line = document.createElement('p');//创建p标签
+     var content = document.createTextNode('test');//创建内容
+
+     line.appendChild(content);//用appendChild把 content 追加到line里
+     document.body.appendChild(line); //同上，用appendChild把 line 追加到body里
+
 
     </script>
 </body>
