@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom3</title>
+</head>
+<body>
+    <script>
+        function test_one()
+        {
+            alert('ticcc');
+        }
+
+        function test_two(o)
+        {
+            alert(o+o+o);
+        }
+    </script>
+
+    
+    <p onclick='test_one();'>click me</p>
+    
+    <p id="line2">click me</p>
+    <p id="line3">click me</p>
+    
+    <script>
+        //添加方法
+        document.querySelector("#line2").onclick=test_one;
+        //监听 event
+        document.querySelector('#line3').addEventListener('click',function(){test_two('rice')});
+    </script>
+
+</body>
+</html>
