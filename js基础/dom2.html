@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom2</title>
+</head>
+<body>
+
+    <a href="http://www.github.com/ticsta7"><img src="https://images.unsplash.com/photo-1479063589010-7697b04feb14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=1114&q=80" alt=""></a>
+    <script>
+        //元信息
+     console.log(document.doctype.name);
+     console.log(document.domain);
+     console.log(document.charset);
+     console.log(document.location.href);   
+     
+     //子元素
+     console.log(document.head.innerHTML);
+
+     
+     //资源
+     for( i = 0 ; i<document.images.length;i++)
+     {
+        console.log(document.images[i].src);
+     }
+
+    </script>
+</body>
+</html>
