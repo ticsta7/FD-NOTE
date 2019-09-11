@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>api</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/jquery"></script>
+
+    <input type="text" placeholder="请输入内容">
+   
+    <script>
+        function send_message (content)
+        {
+            let data =
+            {
+                sendkey:'**',
+                text:content
+            };
+        $.post(
+            'https://pushbear.ftqq.com/sub',data,function(data){console.log(data);}
+        );
+        }
+    </script>
+
+<button onclick="send_message($('input').val())">发送</button>
+
+</body>
+</html>
