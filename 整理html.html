@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>整理</title>
+
+     <!-- meta :字符集 -->
+     <meta charset="UTF-8">
+
+     <!-- 关键词描述文档的主要内容。是搜索引擎抓取网页，并对协议内容进行索引的重要依据。 -->
+     <meta name="keywords" content="这是关键字">
+     
+     <!-- 刷新页面 -->
+     <meta http-equiv="refresh" content="30">
+     
+     <!-- 指定viewport -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     
+     <!-- 路径前缀，作为页面里所有链接的相对路径的base -->
+     <base href="http://github.com/ticsta7">
+     <!-- 页面里边的所有的链接，点击时都自动新开窗口 -->
+     <base target="_blank">
+
+</head>
+<body>
+    
+    <!-- 上/下 标 -->
+    <p>X<sup>2</sup> &amp; X<sub>2</sub>。</p>
+
+    <!-- abbr 鼠标挪上去 出现 title的内容 -->
+    <p>这个 CodePan 架设在 <abbr title="SinaAppEngine">SAE</abbr> 上边。</p>
+
+    <!--target="_blank" 开启新窗口
+    target="随便写个名字" ，点开的时候，是新窗口，再点开，就不新开，而是激活刚刚点开的
+       -->
+    <p>github<a href="http://github.com/ticsta7" target="_blank">方糖气球</a> </p>
+       <!-- 块级元素：单独占一行，并会尝试着横向把左边和右边全部填满 
+                   它前边和后边写的东西都会被挤到上边和下边去-->
+
+    <!-- pre -->
+    <pre>
+        能保持内部文字原有格式
+        想怎么换行都行
+    </pre>
+
+    <!-- code呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示 -->
+    <code>
+        function(){
+           <!-- do something  -->
+        }
+    </code>
+   
+    <!-- dl 列表 dt：每一个段的标题 dd：段的内容项 -->
+    <dl>
+           <dt>head1 </dt>
+           <dd>h1c1</dd>
+           <dd>h1c2</dd>
+           <dt>head2</dt>
+           <dd>h2c1</dd>
+           <dd>h2c2</dd>
+           <dd>h2c3</dd>
+         </dl>
+         <!-- 表格 r=row=行 col=Column=列 -->
+         <table>
+               <caption>招聘薪资统计</caption>
+               <tr>
+                   <!-- tablehead -->
+                 <th>语言</th>
+                 <th>城市</th> 
+                 <th>薪资</th>
+               </tr>
+               <tr>
+                 <td>PHP</td>
+                 <td rowspan="2">北京</td> 
+                 <td>16501元 ~ 28713元</td>
+               </tr>
+               <tr>
+                 <td>前端</td>
+                 <td>17423元 ~ 30919元</td>
+               </tr>
+               <tr>
+                 <td colspan="2">平均</td>
+                 <td>25212元 ~ 29816元</td>
+               </tr>
+             </table>
+             <!--  最简单的表格-->
+             <table>
+                   <caption>最简单的表格</caption>
+                   <tr>
+                     <td>1</td>
+                     <td>2</td>
+                     <td>3</td>
+                   </tr>
+                   <tr>
+                     <td>4</td>
+                     <td>5</td>
+                     <td>6</td>
+                   </tr>
+                   <tr>
+                     <td>7</td>
+                     <td>8</td>
+                     <td>9</td>
+                   </tr>
+                 </table>
+
+                 <img src="#" alt="图片无法显示时候 显示本行文字">
+
+                 <audio src="#" controls loop = 'false' autoplay = 'ture'></audio>
+                 <video src="#" controls ></video>
+
+                 <!-- 表单 -->
+                 <!-- action 一个处理此表单信息的程序所在的URL （就是这个请求要往哪里发） -->
+                 <form method="POST" aciton="/index.php" enctype="application/x-www-form-urlencoded">
+                   <div>
+                     <input type="text" name="title" placeholder="文章标题"/>
+                   </div>
+                   <div>
+                     <input type="radio" value="1" checked="checked"/>技术&nbsp;
+                     <input type="radio" value="2"/>产品&nbsp;
+                   </div>
+                   
+                   <div>
+                       <!-- 下拉框 ，multiple写上=可以多选（按住shift） -->
+                   <select name="cate" multiple>
+                     <option value="1">文档</option>
+                     <option value="2">代码</option>
+                     <option value="3">新闻</option>
+                   </select>  
+                   </div>
+                   
+                   <div>
+                     <textarea name="" id="" cols="30" rows="10"></textarea>
+                   </div>
+                   
+                   <div>
+                     <input type="submit" value="提交"/>
+                   </div>
+
+                   
+                 </form>
+
+</body>
+</html>
