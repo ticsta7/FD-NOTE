@@ -11,9 +11,10 @@ class selector
 id selector
 #idname{}
 
+
 优先级（话语权）
-!important > 行间样式 > id > class > tag > 通配符匹配所有的标签（*）
- 权重 无限  >  1000   > 100 >  10  >  1  > 0  (256进制）  
+!important > 行间样式 > id > class=属性选择器=伪类 > tag=伪元素 > 通配符匹配所有的标签（*）
+ 权重 无限  >  1000   > 100 >        10         >      1     > 0  (256进制）  
 
 div{
     background-color:pink;!improtant;
@@ -24,7 +25,14 @@ div{
 /*
  父子选择器 （派生选择器）
 子，包括但不限于 儿子孙子
- */
+ 
+直接子元素选择器
+
+div > span {}
+
+只能选择‘儿子’，不能选择‘孙子’
+
+*/
 
 .mao {
     position: fixed;

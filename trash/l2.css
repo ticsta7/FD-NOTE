@@ -28,7 +28,8 @@ div {
 /* 
  可以 #三原色的值 （rgb）
  例如 #ff0000 （red）
- 00 min  00 01 。。。09 -> 0a。。。。0f -> 10
+ 00 min 
+ 00 01 。。。09 -> 0a。。。。0f -> 10
  ff max
  也可以 color:rgb(r,g,b);
  r,g,b 是0-255的数字
@@ -42,6 +43,7 @@ div {
 /* 
 border:像素 风格 颜色；
 风格：solid 实线 最常用的
+ r g b
 #ff4400= #f40
  */
 
@@ -51,12 +53,17 @@ div {
     line-height: 100px;
     text-indent: 10em;
 }
-
+/* 文字高度 font-size 默认16px
+   行高    line-height 控制单行文本所占高度
+    上面2个配合使用，可以控制‘行间距’
+    所以，行高=文字高度，则行间距=0
+     
+*/
 
 /*
  居中水平 
- 当行高（line height）= height 文本就垂直居中了
-text indent 首行缩进，可以写PX，也可以em ，一个相对单位。
+ 当 行高（line-height）= height 文本就垂直居中了
+text indent:首行缩进，可以写PX，也可以em ，一个相对单位。
 1 em= 1fontsize 的值
 例如 font size：10px；
 则此时 1em= 10px
@@ -73,7 +80,7 @@ div {
   underline ，
   line-through 删除线
   overline  上划线 （一般不用）
-  
+   
  */
 
 div {
