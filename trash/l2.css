@@ -254,9 +254,16 @@ position：absolute relative fixed  static；
 
 文本类元素：带有inline属性的元素。
 
+解决方案：把钻到底下的，转换成bfc，或者伪元素
+{  酌情选择
+    1  加上 overflow:hidden 溢出隐藏 
+    2  position:absolute； 
+    3  float：left/right；
+    4  display：inlin-block；
+ }
 
-
-
+ ps：{  position:absolute； 
+        float：left/right；} 这俩， 会打内部把元素变成inline-block
 
 
 
