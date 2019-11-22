@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #424242;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.nav{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav .listItem{
+    float: left;
+    margin: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid black;
+}
+.nav .listItem a{
+    color: #f40;
+    height: 30px;
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: 15px;
+    /* 设圆 角 */
+}
+
+.nav .listItem a:hover{
+    background-color: #ff4400;
+    color: white;
+}
+
+/* 此时功能都写完了，但是产生了浮动流，会影响后面的元素
+so，下面是清除浮动流 */
+
+/* 因为是清除整个 div.nav 后面的浮动流，所以 */
+
+.nav{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 这是三件套
+content空，display块，clear：both */

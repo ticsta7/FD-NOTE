@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid black;
+    /* 到这一句以上 是溢出的 */
+
+    /* 下面处理溢出，固定三件套
+    1,让溢出部分 不折行
+    2，溢出部分隐藏 
+    3,'...'显示*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.bgImg{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-image: url(img.jpg );
+    background-size: 100px 100px;
+    /* 这里图片会重复显示，所以可以这样 */
+    background-repeat: no-repeat;
+    /* 还可以定位 */
+    background-position: 0 0;
+    /*写坐标 */
+    /* background-position: top left; */
+    /* 左下角 */
+    
+    /* background-position: center center;
+    居中 */
+}
+
+a{
+    background-image: url(https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+    display: inline-block;
+    width: 190px;
+    height: 90px;
+    background-size: 190px 90px;
+
+    /* 缩进整个容器宽度，文字就出去了（但是会折行） */
+    text-indent: 190px;
+    /* 三件套其中2个 ，溢出部分不折行*/
+    white-space: nowrap;
+    overflow: hidden;
+
+
+    /* 方法二：容器高度设置为0，然后高度用padding来提供
+    （因为文字进不了padding，背景图片却可以
+     
+    background-image: url(https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+     display: inline-block;
+     width: 190px;
+     height: 0px;
+     padding: 90px;
+     background-size: 190px 90px;
+ 
+     overflow: hidden;
+     
+    */
+
+     
+
+
+}
