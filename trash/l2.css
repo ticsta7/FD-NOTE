@@ -141,6 +141,7 @@ div {
 
 /*
  margin 塌陷
+ 垂直方向的margin ，嵌套的父子结构是粘合在一起的，二者取最大值显示
  <div class="wai">
  
  <div class="nei"> 
@@ -157,14 +158,18 @@ div {
      margin-top > wai 的margin top
      就带着 wai 这个DIV 一起往下动
  }
+----------------------------------------
+ 解决方法：给.wai 加一个 border-top（但是加了东西了，不行） 
 
- 解决方法：给.wai 加一个 border-top（但是加了东西了） 
- 或者 wai 加上 overflow:hidden 溢出隐藏（也有副作用）
+ 或者 
  
- so。 触发bfc  块级格式化上下文 
- 还可以 position:absolute； 
- or   float：left；
- or   display：inlin-block；
+ so。 触发bfc (block format context) 块级格式化上下文
+ {  酌情选择
+    1  加上 overflow:hidden 溢出隐藏 
+    2  position:absolute； 
+    3  float：left/right；
+    4  display：inlin-block；
+ }
 
  ------
  若想让 某个标签居中且有margin，
@@ -183,15 +188,34 @@ position：absolute relative fixed  static；
           绝对      相对      固定   默认的（标准文档流定位）
 
          absolute 脱离原来位置向上提一个层，（出屏幕外朝向人）
-                  找离他最近的有定位的父级定位，如果没有
+                  找离他最近的 有定位的（absolute，relative，啥啥的都行） 父级定位，如果没有
                   参照浏览器边框进行定位         
          
                   若2个标签都 absolute了 后 absolute的标签 抽离的层面更高
          控制Z轴坐标
           z-index:1; (给一个大于零的值）
         
-        relative:1 保留为止进行定位。
-                 2 参照原来位置进行定位
+        relative:1 也是抽离出来 向上（朝人）提一个层，但是原来位置依然保留
+                 2 以原来位置为坐标原点，进行定位
+                 类似灵魂出窍，原来的位置 还占着，但是可以根据原来位置四处飘。
+
+                 一般工作中，用absolute进行定位，用relative作为参照物
          
-          
+          div{
+            width:50px;
+            height:50px;
+            background-color:red;
+
+            如果想文档水平垂直居中（拉伸浏览器窗口也不变）
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-50px;
+            margin-left:-50px;
+
+            如果想，相对可视窗口居中
+            就把上面的absolute -> fixed
+            其他照抄 
+
+          }
 */
