@@ -170,7 +170,33 @@ div {
     3  float：left/right；
     4  display：inlin-block；
  }
+-------------------------------------
+margin合并。（兄弟级别的元素）
 
+ 举例子：
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+
+    .demo1{
+    background-color:red;
+    margin-bottom: 100px;}
+
+.demo2{
+    background-color: green;
+    margin-top: 100px;}
+    
+    这里的margin不会叠加到200，只是取100，如果有一个变成150，则取最大值150
+
+    解决方案 既要加上html ，又要加css（bfc）
+    <div class="wrapper">    <div class="demo1"></div></div>
+    <div class="wrapper">   <div class="demo2"></div></div>
+    
+    .warpper{
+    overflow: hidden;
+}
+    
+
+    真实开发中选择，不解决。因为如果想需要叠加200，那就直接一个写0，一个写200就行，用数学计算的方式来补齐。
  ------
  若想让 某个标签居中且有margin，
  且横向拉动浏览器，标签不消失
@@ -218,4 +244,21 @@ position：absolute relative fixed  static；
             其他照抄 
 
           }
+*/
+
+/* 浮动模型，
+
+1.浮动产生了浮动流，
+所有产生了浮动流的元素，块级元素看不到他们。（会钻到底下 Z轴）
+产生了bfc的元素+文本类属的元素+文本 都能看到浮动元素
+
+文本类元素：带有inline属性的元素。
+
+
+
+
+
+
+
+
 */
