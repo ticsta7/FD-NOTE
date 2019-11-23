@@ -20,31 +20,14 @@ div {
 
  */
 
-div {
-    color: red;
-}
-
-
 /* 
- 可以 #三原色的值 （rgb）
+ color 可以 #三原色的值 （rgb）
  例如 #ff0000 （red）
  00 min 
  00 01 。。。09 -> 0a。。。。0f -> 10
  ff max
  也可以 color:rgb(r,g,b);
  r,g,b 是0-255的数字
- */
-
-div {
-    border: 1px solid #f40;
-}
-
-
-/* 
-border:像素 风格 颜色；
-风格：solid 实线 最常用的
- r g b
-#ff4400= #f40
  */
 
 div {
@@ -61,19 +44,14 @@ div {
 */
 
 /*
- 居中水平 
- 当 行高（line-height）= height 文本就垂直居中了
-text indent:首行缩进，可以写PX，也可以em ，一个相对单位。
+ 居中水平： 行高（line-height）= height 文本就垂直居中了
+
+text indent:首行缩进，可以写PX，也可以em 
 1 em= 1fontsize 的值
-例如 font size：10px；
-则此时 1em= 10px
+例 font size：10px；
+则 1em= 10px
 
  */
-
-div {
-    text-decoration: underline;
-}
-
 
 /* 
   text-decoration ,
@@ -83,15 +61,7 @@ div {
    
  */
 
-div {
-    cursor: pointer;
-}
-
-
-/* cursor
- 是 鼠标碰到他时候， 指针样式 */
-
-
+div {cursor: pointer;/* cursor是 鼠标碰到他时候， 指针样式 */}
 /* 
 块标签 div p  address 
 ul li ol
@@ -105,14 +75,10 @@ ul li ol
 
 行级块标签  img input ß
 根据自身大小决定占的空间
-可以通过，，，，
+可以通过css。。。。。
+*/
 
-display：block inline inline-block；
- */
-
-
-/* 给img设置宽高时候，最好只设置1个值
- 另一个就自适应了。 */
+/* 给img设置宽高时候，最好只设置1个值，另一个就自适应了。 */
 
 
 /* 
@@ -126,7 +92,6 @@ display：block inline inline-block；
 
 /* 
 div {
-    
     padding: 10px； 一圈10px
     padding：10px 20px； 上下 左右
     padding：10px 20px 30px 40px； 
@@ -198,12 +163,11 @@ margin合并。（兄弟级别的元素）
 
     真实开发中选择，不解决。因为如果想需要叠加200，那就直接一个写0，一个写200就行，用数学计算的方式来补齐。
  ------
- 若想让 某个标签居中且有margin，
- 且横向拉动浏览器，标签不消失
+ div套div
+ 
+ 若想让 内div居中，且横向拉动浏览器，标签不消失（外div缩小）
 
- 可以 设定宽度 如 width 100
- 然后 margin-left：auto
-           - right:auto
+ 可以 先设一个想要的宽度， 然后 margin:0 auto
 */
 
 
@@ -252,7 +216,7 @@ position：absolute relative fixed  static；
 所有产生了浮动流的元素，块级元素看不到他们。（会钻到底下 Z轴）
 产生了bfc的元素+文本类属的元素+文本 都能看到浮动元素
 
-文本类元素：带有inline属性的元素。
+文本类元素：带有inline属性的元素。（因为带有文本类特点，例如 文本分隔符）
 
 解决方案：把钻到底下的，转换成bfc，或者伪元素(微信图片）
 
