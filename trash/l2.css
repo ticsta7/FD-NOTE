@@ -61,7 +61,7 @@ text indent:首行缩进，可以写PX，也可以em
    
  */
 
-div {cursor: pointer;/* cursor是 鼠标碰到他时候， 指针样式 */}
+
 /* 
 块标签 div p  address 
 ul li ol
@@ -183,7 +183,7 @@ position：absolute relative fixed  static；
          
                   若2个标签都 absolute了 后 absolute的标签 抽离的层面更高
          控制Z轴坐标
-          z-index:1; (给一个大于零的值）
+         
         
         relative:1 也是抽离出来 向上（朝人）提一个层，但是原来位置依然保留
                  2 以原来位置为坐标原点，进行定位
