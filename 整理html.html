@@ -23,38 +23,40 @@
      <base href="http://github.com/ticsta7">
      <!-- 页面里边的所有的链接，点击时都自动新开窗口 -->
      <base target="_blank">
-
+     
+     <link rel="stylesheet" href="./collection.css">
 </head>
 <body>
     
-    <!-- 上/下 标 -->
-    <p>X<sup>2</sup> &amp; X<sub>2</sub>。</p>
+  <!-- 上/下 标 -->
+  <p>X<sup>2</sup> &amp; X<sub>2</sub>。</p>
 
-    <!-- abbr 鼠标挪上去 出现 title的内容 -->
-    <p>这个 CodePan 架设在 <abbr title="SinaAppEngine">SAE</abbr> 上边。</p>
+  <!-- abbr 鼠标挪上去 出现 title的内容 -->
+  <p>这个 CodePan 架设在 <abbr title="SinaAppEngine">SAE</abbr> 上边。</p>
 
-    <!--target="_blank" 开启新窗口
-    target="随便写个名字" ，点开的时候，是新窗口，再点开，就不新开，而是激活刚刚点开的
-       -->
-    <p>github<a href="http://github.com/ticsta7" target="_blank">方糖气球</a> </p>
-       <!-- 块级元素：单独占一行，并会尝试着横向把左边和右边全部填满 
-                   它前边和后边写的东西都会被挤到上边和下边去-->
+  <!--target="_blank" 开启新窗口
+  target="随便写个名字" ，点开的时候，是新窗口
+  再点开，就不新开，而是激活刚刚点开的
+  -->
+  <p>github<a href="http://github.com/ticsta7" target="_blank">方糖气球</a> </p>
+  <!-- 块级元素：单独占一行，并会尝试着横向把左边和右边全部填满 
+  它前边和后边写的东西都会被挤到上边和下边去-->
 
     <!-- pre -->
-    <pre>
+  <pre>
         能保持内部文字原有格式
         想怎么换行都行
-    </pre>
+  </pre>
 
-    <!-- code呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示 -->
-    <code>
+  <!-- code呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示 -->
+  <code>
         function(){
            <!-- do something  -->
         }
-    </code>
+  </code>
    
-    <!-- dl 列表 dt：每一个段的标题 dd：段的内容项 -->
-    <dl>
+  <!-- dl 列表 dt：每一个段的标题 dd：段的内容项 -->
+  <dl>
            <dt>head1 </dt>
            <dd>h1c1</dd>
            <dd>h1c2</dd>
@@ -62,9 +64,9 @@
            <dd>h2c1</dd>
            <dd>h2c2</dd>
            <dd>h2c3</dd>
-         </dl>
-         <!-- 表格 r=row=行 col=Column=列 -->
-         <table>
+  </dl>
+  <!-- 表格 r=row=行 col=Column=列 -->
+  <table>
                <caption>招聘薪资统计</caption>
                <tr>
                    <!-- tablehead -->
@@ -85,9 +87,10 @@
                  <td colspan="2">平均</td>
                  <td>25212元 ~ 29816元</td>
                </tr>
-             </table>
-             <!--  最简单的表格-->
-             <table>
+  </table>
+   
+  <!--  最简单的表格-->
+  <table>
                    <caption>最简单的表格</caption>
                    <tr>
                      <td>1</td>
@@ -104,16 +107,15 @@
                      <td>8</td>
                      <td>9</td>
                    </tr>
-                 </table>
+  </table>
+  <img src="#" alt="图片无法显示时候 显示本行文字">
 
-                 <img src="#" alt="图片无法显示时候 显示本行文字">
+  <audio src="#" controls loop = 'false' autoplay = 'ture'></audio>
+  <video src="#" controls ></video>
 
-                 <audio src="#" controls loop = 'false' autoplay = 'ture'></audio>
-                 <video src="#" controls ></video>
-
-                 <!-- 表单 -->
-                 <!-- action 一个处理此表单信息的程序所在的URL （就是这个请求要往哪里发） -->
-                 <form method="POST" aciton="/index.php" enctype="application/x-www-form-urlencoded">
+  <!-- 表单 -->
+  <!-- action 一个处理此表单信息的程序所在的URL （就是这个请求要往哪里发） -->
+  <form method="POST" aciton="/index.php" enctype="application/x-www-form-urlencoded">
                    <div>
                      <input type="text" name="title" placeholder="文章标题"/>
                    </div>
@@ -123,7 +125,7 @@
                    </div>
                    
                    <div>
-                       <!-- 下拉框 ，multiple写上=可以多选（按住shift） -->
+                       <!-- 下拉框 ，写上multiple=可以多选（按住shift） -->
                    <select name="cate" multiple>
                      <option value="1">文档</option>
                      <option value="2">代码</option>
@@ -140,7 +142,90 @@
                    </div>
 
                    
-                 </form>
+  </form>
+
+
+  <!-- h$*6 ↓ -->
+  <h1></h1>
+  <h2></h2>
+  <h3></h3>
+  <h4></h4>
+  <h5></h5>
+  <h6></h6>
+  <!-- HTMl编码的格式 &； -->
+  &nbsp; <!-- 表示空格 -->
+  &lt; <!-- &lt; = < less  than-->
+  &gt;<!-- &gt; = >  great than-->
+
+  <a href="javascript:while(1){console.log('嗯？')}">点我啊</a>
+  <!-- a 标签的作用
+  1，链接
+  2，锚点， 给其他标签id，然后 href=‘id’
+  3，打电话，tel
+  4，协议限定符，如上
+  -->
+
+  主流浏览器 及其内核
+  ie   trident
+  chrome  webkit/blink
+  safari  webkit
+  firefox gecko
+  opera   presto
+
+
+
+  <ul class="nav">
+    <li class="listItem"> 
+        <a href="#">Tmall</a>
+    </li>
+    <li class="listItem">
+        <a href="#">聚划算</a>
+    </li>
+    <li class="listItem">
+        <a href="#">天猫超市</a>
+    </li>
+</ul>
+
+
+
+ <!-- 溢出容器 打点‘。。。’显示 -->
+
+    <!-- 1,单行文本 -->
+
+    <p class="longSen">这是一条长语句，为了测试长语句文本溢出之后打点显示的demo功能</p>
+
+    <!-- 2，多行文本，做截断 
+    让 height 和 line-height 成整数倍关系
+    然后 overflow: hidden;-->
+
+
+<h1>背景图片处理</h1>
+<div class="bgImg"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- 只有html的时候，没有js 和css（网速慢）
+也能让网站工作 -->
+<a class="without" href="https://www.taobao.com" target="_blank">
+    淘宝
+</a>
+
+<!-- 行级元素 只能 套行级元素
+     块级元素 随便 套任何元素
+    
+    p里面 不能 套 div
+<p>
+    <div>这样是不行的！</div>
+</p>
+
+a里面也不能套a
+    
+    -->
+
 
 </body>
 </html>
