@@ -44,11 +44,11 @@ console.log( f );
 //  字符串
 
 
-var name = 'tic';
-var notice_string  = "<div>
-<h1>"+ name +"</h1>
-<p>服务器又挂了</p>
-</div>";
+// var name = 'tic';
+// var notice_string  = "<div>
+// <h1>"+ name +"</h1>
+// <p>服务器又挂了</p>
+// </div>";
 
 // 改：var notice_string  = "<div>"
 // +"<h1>"+ name +"</h1>"

@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>整理</title>
-
-     <!-- meta :字符集 -->
+    <link rel="stylesheet" href="collection.css">
+    <!-- meta :字符集 -->
      <meta charset="UTF-8">
 
      <!-- 关键词描述文档的主要内容。是搜索引擎抓取网页，并对协议内容进行索引的重要依据。 -->
@@ -20,11 +19,11 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      
      <!-- 路径前缀，作为页面里所有链接的相对路径的base -->
-     <base href="http://github.com/ticsta7">
+     <!-- <base href="http://github.com/ticsta7"> -->
      <!-- 页面里边的所有的链接，点击时都自动新开窗口 -->
-     <base target="_blank">
+     <!-- <base target="_blank"> -->
      
-     <link rel="stylesheet" href="./collection.css">
+     
 </head>
 <body>
     
@@ -225,6 +224,129 @@
 a里面也不能套a
     
     -->
+    
+    <!-- <h4>标准字体和 H4是一样大小</h4>
+    <span style="text-decoration:line-through;"> css方式划 删除线</span> -->
+
+    <!--
+          div 
+          如 asdasdasdasd 
+          没有间隔符，就可能溢出（文字伸出边框）
+          空格用： &nbsp；
+          br标签 ：换行
+         <: &lt；  
+         less than
+         >： &gt；
+         greater than
+
+
+        -->
+
+    <h1>list reversed="reversed" 倒叙</h1>
+    <ol reversed="reversed">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <h1>list </h1>
+    <ol type="a" start="3">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <h1>list type i</h1>
+    <ol type="i">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <h1>list t=A</h1>
+    <ol type="A" start="4">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <h1>list t=I</h1>
+    <ol type="I">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    
+    <!-- 看文件路径
+https://jingyan.baidu.com/article/380abd0a12007b1d91192c5e.html
+   img：
+   title是用户鼠标放上来 显示的文字。
+   alt是图片无法显示 显示的文字
+
+相对地址 
+  同目录 ./1.css
+  子目录 ./src/1.css
+  上级目录../src/xxx.css
+ -->
+    <br>
+
+    <!-- <a href="https://github.com/" target="_blank">github</a> -->
+    <br>
+    <!-- target _blank 是新标签页打开连接 -->
+    <a class="mao" href="#mao">a标签 href属性= #+id 效果相当于跳到id（=mao） 的锚点</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="mao"></div>
+</body>
+
+<br>
+<br>
+
+
+<a href="mailto:ticsta7@163com">调用发邮件</a>
+
+
+<form action="/" method="GET">
+    <p>
+        username <input type="text" name="username">
+    </p>
+    <p>
+        psw <input name="password" type="password">
+    </p>
+
+    <input type="submit" value="login">
+</form>
+<!-- action 里面写地址
+ method
+ post 
+ get
+ input 的 name 得和ee商量好
+-->
+
+<h1>你喜欢的品牌</h1>
+
+bmw<input type="radio" name="1" value="bmw"> mercedes-benz
+
+<input type="radio" name="1" value="mercedes-benz"> mercedes
+
+<input type="radio" name="1" value="mercedes">
+<!--
+     input里面 type=radio 就是选择题 
+     name 一致时候，才是单选
+     value 是传输的值
+     
+-->
+
+<h1>input checkbox</h1>
+
+rolex<input type="checkbox" name="watch"> tudor
+<input type="checkbox" name="watch"> ap
+<input type="checkbox" name="watch">
+
 
 
 </body>

@@ -130,3 +130,256 @@ content空，display块，clear：both */
      
     */
 }
+
+
+
+/* 
+优先级
+!important > 行间样式 > id > class=属性选择器=伪类 > tag=伪元素 > 通配符匹配所有的标签（*）
+ 权重 无限  >  1000   > 100 >        10         >      1     > 0  (256进制）  
+div{color:pink;!improtant;}
+*/
+
+
+/*
+ 父子选择器 （派生选择器）
+子，包括但不限于 儿子孙子
+ 
+
+直接子元素选择器
+div > span {}
+只能选择‘儿子’，不能选择‘孙子’
+
+*/
+
+.mao {
+    position: fixed;
+    right: 50px;
+    top: 100px;
+}
+
+
+
+
+
+/*
+ 浏览器 文字默认大小 16px
+ 
+ font-size 是设置高度，宽度是自适应
+ 
+ font-family 字体 
+ 
+ font-weight 默认normal
+ 还可以 lighter  bold  bolder
+ 一般情况下 lighter 和bolder 都不用
+ 还可以 写数字 ，如100，200。 manx=900.
+ bold 效果和 <strong>标签效果一样。
+
+ */
+
+/* 
+ color 可以 #三原色的值 （rgb）
+ 例如 #ff0000 （red）
+ 00 min 
+ 00 01 。。。09 -> 0a。。。。0f -> 10
+ ff max
+ 也可以 color:rgb(r,g,b);
+ r,g,b 是0-255的数字
+ */
+
+ div {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    text-indent: 10em;
+}
+/* 文字高度 font-size 默认16px
+   行高    line-height 控制单行文本所占高度
+    上面2个配合使用，可以控制‘行间距’
+    所以，行高=文字高度，则行间距=0
+     
+*/
+
+/*
+ 居中水平： 行高（line-height）= height 文本就垂直居中了
+
+text indent:首行缩进，可以写PX，也可以em 
+1 em= 1fontsize 的值
+例 font size：10px；
+则 1em= 10px
+
+ */
+
+/* 
+  text-decoration ,
+  underline ，
+  line-through 删除线
+  overline  上划线 （一般不用）
+   
+ */
+
+
+/* 
+块标签 div p  address 
+ul li ol
+ form h1-h6
+独占一行
+可以通过CSS设置 宽高
+
+行标签 span  a em strong del
+根据自身大小决定占的空间
+不可以通过。。。如上
+
+行级块标签  img input ß
+根据自身大小决定占的空间
+可以通过css。。。。。
+*/
+
+/* 给img设置宽高时候，最好只设置1个值，另一个就自适应了。 */
+
+
+/* 
+ div{
+     vertical-align: middle;
+ } 
+ 控制右边 {行级（块）标签/文本}  的对齐方式
+ 
+ 也可以写像素*/
+
+
+/* 
+div {
+    padding: 10px； 一圈10px
+    padding：10px 20px； 上下 左右
+    padding：10px 20px 30px 40px； 
+    上右下左 12点顺时针
+
+    margin 左右会叠加，上下不会，会取最大值
+ 
+} 
+
+*/
+
+
+/*
+ margin 塌陷
+ 垂直方向的margin ，嵌套的父子结构是粘合在一起的，二者取最大值显示
+ <div class="wai">
+ 
+ <div class="nei"> 
+ 
+ </div>
+ </div>
+
+ .wai{
+     margin-top;100
+     margin-left 100
+ }
+
+ .nei{
+     margin-top > wai 的margin top
+     就带着 wai 这个DIV 一起往下动
+ }
+----------------------------------------
+ 解决方法：给.wai 加一个 border-top（但是加了东西了，不行） 
+
+ 或者 
+ 
+ so。 触发bfc (block format context) 块级格式化上下文
+ {  酌情选择
+    1  加上 overflow:hidden 溢出隐藏 
+    2  position:absolute； 
+    3  float：left/right；
+    4  display：inlin-block；
+ }
+-------------------------------------
+margin合并。（兄弟级别的元素）
+
+ 举例子：
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+
+    .demo1{
+    background-color:red;
+    margin-bottom: 100px;}
+
+.demo2{
+    background-color: green;
+    margin-top: 100px;}
+    
+    这里的margin不会叠加到200，只是取100，如果有一个变成150，则取最大值150
+
+    解决方案 既要加上html ，又要加css（bfc）
+    <div class="wrapper">    <div class="demo1"></div></div>
+    <div class="wrapper">   <div class="demo2"></div></div>
+    
+    .warpper{
+    overflow: hidden;
+}
+    
+
+    真实开发中选择，不解决。因为如果想需要叠加200，那就直接一个写0，一个写200就行，用数学计算的方式来补齐。
+ ------
+ div套div
+ 
+ 若想让 内div居中，且横向拉动浏览器，标签不消失（外div缩小）
+
+ 可以 先设一个想要的宽度， 然后 margin:0 auto
+*/
+
+
+/* 
+层模型  2d变3d
+
+position：absolute relative fixed  static；  
+          绝对      相对      固定   默认的（标准文档流定位）
+
+         absolute 脱离原来位置向上提一个层，（出屏幕外朝向人）
+                  找离他最近的 有定位的（absolute，relative，啥啥的都行） 父级定位，如果没有
+                  参照浏览器边框进行定位         
+         
+                  若2个标签都 absolute了 后 absolute的标签 抽离的层面更高
+         控制Z轴坐标
+         
+        
+        relative:1 也是抽离出来 向上（朝人）提一个层，但是原来位置依然保留
+                 2 以原来位置为坐标原点，进行定位
+                 类似灵魂出窍，原来的位置 还占着，但是可以根据原来位置四处飘。
+
+                 一般工作中，用absolute进行定位，用relative作为参照物
+         
+          div{
+            width:50px;
+            height:50px;
+            background-color:red;
+
+            如果想文档水平垂直居中（拉伸浏览器窗口也不变）
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-50px;
+            margin-left:-50px;
+
+            如果想，相对可视窗口居中
+            就把上面的absolute -> fixed
+            其他照抄 
+
+          }
+*/
+
+/* 浮动模型，
+
+1.浮动产生了浮动流，
+所有产生了浮动流的元素，块级元素看不到他们。（会钻到底下 Z轴）
+产生了bfc的元素+文本类属的元素+文本 都能看到浮动元素
+
+文本类元素：带有inline属性的元素。（因为带有文本类特点，例如 文本分隔符）
+
+解决方案：把钻到底下的，转换成bfc，或者伪元素(微信图片）
+
+ ps：设置了{  position:absolute；  float：left/right；} 这俩，会打内部把元素变成inline-block
+
+伪元素，初始都是inline ,必须要有content，哪怕是 =‘’；
+
+
+*/
